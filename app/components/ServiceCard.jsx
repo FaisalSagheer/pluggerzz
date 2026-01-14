@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Clean from "@/public/assets/clean.png"
 import Link from 'next/link';
 
-function ServiceCard({ posts}) {
+function ServiceCard({ posts }) {
     if (posts?.length === 0) {
         return (
             <div>No Post Available</div>
@@ -24,14 +24,14 @@ function ServiceCard({ posts}) {
                                     <Image src={bgImage} alt={altText} width={200} height={200} className='w-84 rounded bg-cover bg-center' />
                                 </div>
                                 <div className='relative ml-10 space-y-3 mt-10'>
-                                    <h3 className='text-[35.27px] font-semibold' dangerouslySetInnerHTML={{ __html: service.title.rendered }}></h3>
-                                    <p className='text-[21.29px] w-1/2' dangerouslySetInnerHTML={{ __html: service.content.rendered }}></p>
+                                    <div className='text-[35.27px] font-semibold' dangerouslySetInnerHTML={{ __html: service.title.rendered }}></div>
+                                    <div className='text-[21.29px] w-1/2' dangerouslySetInnerHTML={{ __html: service.content.rendered }}></div>
                                     <div className='flex flex-col'>
                                         <button className='w-45 text-black p-2 text-[21.29px] rounded-lg bg-[#FFD9D9]'>Schedule Now</button>
-                                        <strong className='font-light pt-2 flex text-[15px]'>
+                                        <div className='font-light pt-2 flex text-[15px]'>
                                             Starts at
                                             £<span dangerouslySetInnerHTML={{ __html: service.excerpt.rendered }}></span>/hr
-                                        </strong>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

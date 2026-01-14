@@ -15,9 +15,9 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 function Nav() {
 
     const [MobileDrawerOpen, setMobileDrawerOpen] = useState(false);
-    const toggleNavbar = () => {
-        setMobileDrawerOpen(!MobileDrawerOpen);
-    };
+    // const toggleNavbar = () => {
+    //     setMobileDrawerOpen(!MobileDrawerOpen);
+    // };
     const [open, setOpen] = useState(false)
     return (
         <nav className="bg-accent text-black">
@@ -131,7 +131,6 @@ function Nav() {
                         </div>
                     </Dialog>
                 </div>
-
             </div>
         </nav>
     )
